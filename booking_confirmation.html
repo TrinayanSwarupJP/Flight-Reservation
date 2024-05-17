@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #00b2a9;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #00b2a9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 20px auto 0;
+        }
+
+        button:hover {
+            background-color: #008675;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Booking Confirmation</h1>
+            
+            <p><strong>Name:</strong> {{ passenger.name }}</p>
+            <p><strong>Email:</strong> {{ passenger.email }}</p>
+            <p><strong>Passport Number:</strong> {{ passenger.passport }}</p>
+            <p><strong>Passenger Type:</strong> {{ passenger.passenger_type }}</p>
+            <p><strong>Ticket Price:</strong> ${{ passenger.calculate_ticket_price() }}</p>
+            <form action="/process_payment" method="POST">
+            <button type="submit">Book</button>
+            </form>
+
+        </div>
+        
+    </header>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>&copy; 2024 LithuanianAirlines.com</p>
+    </footer>
+</body>
+</html>
