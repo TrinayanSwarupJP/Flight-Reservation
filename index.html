@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lithuanian Airlines</title>
+    <style>
+/* Body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Form container styles */
+.search-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00b2a9;
+}
+
+/* Label styles */
+label {
+    font-weight: bold;
+    color: #120707;
+}
+
+/* Input styles */
+input[type="text"] {
+    width: calc(70% - 100px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Select styles */
+select {
+    width: calc(120% - 100px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2300b2a9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    cursor: pointer;
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00b2a9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #008675;
+}
+
+/* Date container styles */
+.date-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Date input styles */
+.date-input {
+    width: calc(50% - 5px);
+    box-sizing: border-box;
+}
+
+footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+    </style>
+    
+    <script>
+        function toggleReturnDate() {
+            var returnDateInput = document.getElementById('return-date');
+            returnDateInput.style.display = (document.getElementById('return').checked) ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="search-form">
+            <h1>Find cheap flights in EUROPE</h1>
+                <form action="/flight_details" method="POST">
+                    <input type="radio" id="one-way" name="trip-type" value="one-way" checked onclick="toggleReturnDate()" >
+                    <label for="one-way">One Way</label>
+                    <br><br>
+                <br><br>
+                <div class="date-fields">
+                    <label for="from">From:</label>
+                    <select name="flight_from" id="flight_from">
+                        <option value="Vilnius">Vilnius</option>
+                        <option value="Kaunas">Kaunas</option>
+                        <option value="Riga">Riga</option>
+                        <option value="London">London</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Rome">Rome</option>
+                        <option value="Amsterdam">Amsterdam</option>
+                        <option value="Vienna">Vienna</option>
+                        <option value="Brussels">Brussels</option>
+                        <option value="Warsaw">Warsaw</option>
+                        <option value="Budapest">Budapest</option>
+                        <option value="Stockholm">Stockholm</option>
+                        <option value="Prague">Prague</option>
+                        <option value="Lisbon">Lisbon</option>
+                        <option value="Budapest">Budapest</option>
+                        <option value="Hamburg">Hamburg</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Munich">Munich</option>
+                        <option value="Frankfurt">Frankfurt</option>
+                        <option value="Prague">Prague</option>
+                        <option value="Copenhagen">Copenhagen</option>
+                        <option value="Athens">Athens</option>
+                        <option value="Dublin">Dublin</option>
+                        <option value="Oslo">Oslo</option>
+                        <option value="Helsinki">Helsinki</option>
+                        <option value="Bucharest">Bucharest</option>
+                        <option value="Sofia">Sofia</option>                        
+                        <option value="Bratislava">Bratislava</option>
+                        <option value="Zagreb">Zagreb</option>                        
+                        <option value="Ljubljana">Ljubljana</option>
+                        <option value="Tallinn">Tallinn</option>
+                        <option value="Luxembourg City">Luxembourg City</option>
+                        <option value="Valletta">Valletta</option>
+                        <option value="Nicosia">Nicosia</option>
+                        <option value="Reykjavik">Reykjavik</option>
+                        <option value="Andorra la Vella">Andorra la Vella</option>
+                        <option value="Vaduz">Vaduz</option>
+                        <option value="Bern">Bern</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Kyiv">Kyiv</option>
+                    </select>
+                    <label for="to">To:</label>
+                    <select name="flight_to" id="flight_to">
+                        <option value="Vilnius">Vilnius</option>
+                        <option value="Kaunas">Kaunas</option>
+                        <option value="Riga">Riga</option>
+                        <option value="London">London</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Rome">Rome</option>
+                        <option value="Amsterdam">Amsterdam</option>
+                        <option value="Vienna">Vienna</option>
+                        <option value="Brussels">Brussels</option>
+                        <option value="Warsaw">Warsaw</option>
+                        <option value="Budapest">Budapest</option>
+                        <option value="Stockholm">Stockholm</option>
+                        <option value="Prague">Prague</option>
+                        <option value="Lisbon">Lisbon</option>
+                        <option value="Budapest">Budapest</option>
+                        <option value="Hamburg">Hamburg</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Munich">Munich</option>
+                        <option value="Frankfurt">Frankfurt</option>
+                        <option value="Prague">Prague</option>
+                        <option value="Copenhagen">Copenhagen</option>
+                        <option value="Athens">Athens</option>
+                        <option value="Dublin">Dublin</option>
+                        <option value="Oslo">Oslo</option>
+                        <option value="Helsinki">Helsinki</option>
+                        <option value="Bucharest">Bucharest</option>
+                        <option value="Sofia">Sofia</option>                        
+                        <option value="Bratislava">Bratislava</option>
+                        <option value="Zagreb">Zagreb</option>                        
+                        <option value="Ljubljana">Ljubljana</option>
+                        <option value="Tallinn">Tallinn</option>
+                        <option value="Luxembourg City">Luxembourg City</option>
+                        <option value="Valletta">Valletta</option>
+                        <option value="Nicosia">Nicosia</option>
+                        <option value="Reykjavik">Reykjavik</option>
+                        <option value="Andorra la Vella">Andorra la Vella</option>
+                        <option value="Vaduz">Vaduz</option>
+                        <option value="Bern">Bern</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Kyiv">Kyiv</option>
+                    </select>
+                    <input type="date" name="departure_date" required>
+                </div>
+                <br><br>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Flight results section here -->
+
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+
+
+
+
+    <footer>
+        <p>&copy; 2024 LithuanianAirlines.com</p>
+    </footer>
+</body>
+</html>
