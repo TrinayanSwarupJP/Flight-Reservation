@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LithuanianAirlines</title>
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.search-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00b2a9;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    width: calc(50% - 5px);
+}
+
+#return-date {
+    width: calc(50% - 5px);
+    display: inline-block;
+    vertical-align: top;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00b2a9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #008675;
+}
+
+footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="search-form">
+            <h1>Flight Reservation</h1>
+            <form action="/booking_confirmation" method="POST">
+                <input type="text" name="passenger_name" placeholder="Name" required><br>
+                <input type="email" name="passenger_email" placeholder="Email" required><br>
+                <input type="text" name="passenger_passport" placeholder="Passport Number" required><br>
+                <select name="passenger_type">
+                    <option value="Economy">Economy</option>
+                    <option value="Premium Economy">Premium Economy</option>
+                    <option value="Business Class">Business Class</option>
+                    <option value="First Class">First Class</option>
+                </select><br>
+
+                <button type="submit">Submit</button>
+            </form>      
+        </div>
+    </header>
+    
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br>
+
+    
+    <footer>
+        <p>&copy; 2024 LithuanianAirlines.com</p>
+    </footer>
+</body>
+</html>
